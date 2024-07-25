@@ -1,60 +1,8 @@
 <script setup>
-import { ref } from 'vue'
 import MainContentHeader from './components/MainContentHeader.vue'
-
-const series = ref([
-  {
-    name: 'Product A',
-    data: [44, 55, 41, 67, 22, 43, 21, 49, 62]
-  },
-  {
-    name: 'Product B',
-    data: [13, 23, 20, 8, 13, 27, 33, 12, 10]
-  },
-  {
-    name: 'Product C',
-    data: [11, 17, 15, 15, 21, 14, 13, 23, 20]
-  }
-])
-
-const chartOptions = ref({
-  chart: {
-    type: 'bar',
-    height: 350,
-    stacked: true,
-    zoom: {
-      enabled: true
-    }
-  },
-  responsive: [
-    {
-      breakpoint: 480,
-      options: {
-        legend: {
-          position: 'bottom',
-          offsetX: -10,
-          offsetY: 0
-        }
-      }
-    }
-  ],
-  plotOptions: {
-    bar: {
-      horizontal: false
-    }
-  },
-  xaxis: {
-    type: 'category',
-    categories: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep']
-  },
-  legend: {
-    position: 'right',
-    offsetY: 40
-  },
-  fill: {
-    opacity: 1
-  }
-})
+import ReplacementChart from './components/ReplacementChart.vue'
+import ProductionChart from './components/ProductionChart.vue'
+import SegmentChart from './components/SegmentChart.vue'
 </script>
 
 <template>
@@ -66,17 +14,20 @@ const chartOptions = ref({
     <div class="sidebar">
       <div class="active">
         <div class="half-rounded-square"></div>
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+        <svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
           <title>view-dashboard</title>
           <path d="M13,3V9H21V3M13,21H21V11H13M3,21H11V15H3M3,13H11V3H3V13Z" />
         </svg>
       </div>
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-        <title>file-document</title>
-        <path
-          d="M13,9H18.5L13,3.5V9M6,2H14L20,8V20A2,2 0 0,1 18,22H6C4.89,22 4,21.1 4,20V4C4,2.89 4.89,2 6,2M15,18V16H6V18H15M18,14V12H6V14H18Z"
-        />
-      </svg>
+      <div class="inactive">
+        <div class="half-rounded-square"></div>
+        <svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+          <title>file-document</title>
+          <path
+            d="M13,9H18.5L13,3.5V9M6,2H14L20,8V20A2,2 0 0,1 18,22H6C4.89,22 4,21.1 4,20V4C4,2.89 4.89,2 6,2M15,18V16H6V18H15M18,14V12H6V14H18Z"
+          />
+        </svg>
+      </div>
     </div>
 
     <div class="main-content">
@@ -95,20 +46,18 @@ const chartOptions = ref({
             </div>
           </div>
 
-          <div>
-            <apexchart type="bar" :options="chartOptions" :series="series"></apexchart>
-          </div>
+          <ReplacementChart />
         </div>
 
         <div class="graph-container" id="production">
           <h2>Overall by Production year</h2>
-          <div id="pie-chart"></div>
+          <ProductionChart />
         </div>
       </div>
 
       <div class="graph-container" id="segment">
         <h2>Segment</h2>
-        <div id="line-chart"></div>
+        <SegmentChart />
       </div>
 
       <div class="graph-container replacement" id="reasons">
@@ -122,7 +71,7 @@ const chartOptions = ref({
             </svg>
           </div>
         </div>
-        <div id="stacked-column-chart-2"></div>
+        <ReplacementChart />
       </div>
 
       <div class="graph-container replacement" id="region">

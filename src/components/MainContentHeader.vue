@@ -1,7 +1,3 @@
-<script setup>
-// import './assets/main.css'
-</script>
-
 <template>
   <div class="top">
     <h1 class="title-new">Replacement</h1>
