@@ -4,7 +4,7 @@ import { ref } from 'vue'
 const series = ref([
   {
     name: 'Sales',
-    data: [10, 41, 35, 51, 49, 62, 69, 91, 148]
+    data: [10, 41, 35, 51, 49, 62]
   }
 ])
 
@@ -33,13 +33,13 @@ const chartOptions = ref({
     }
   },
   xaxis: {
-    categories: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep']
+    categories: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun']
   }
 })
 </script>
 
 <template>
   <div>
-    <apexchart type="line" :options="chartOptions" :series="series"></apexchart>
+    <apexchart height="250" type="line" :options="chartOptions" :series="series"></apexchart>
   </div>
 </template>

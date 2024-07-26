@@ -178,10 +178,6 @@ button {
   gap: 30px;
 }
 
-.side-helper > ul {
-  /* grid-template-rows: repeat(3, 1fr); */
-}
-
 .icon-section {
   display: flex;
   align-items: center;
@@ -201,7 +197,7 @@ button {
 /* Main Content */
 .main-content {
   background-color: #bfdbfe;
-  padding: 20px;
+  padding: 0 50px;
   /* grid-column: 2 / 3; */
   /* display: grid; */
   /* grid-template-rows: 315px 1fr; */
@@ -209,21 +205,45 @@ button {
   /* gap: 15px; */ 
 }
 
-.white-container {
-  background-color: white;
-  padding: 10px; /* Adjust padding as needed */
-  border: 1px solid #bfdbfe;
-  border-radius: 4px; /* Optional: for rounded corners */
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Optional: for a subtle shadow */
-  margin-bottom: 10px; /* Optional: spacing between containers */
-}
-
 .top {
   display: flex;
   justify-content: space-between;
   align-items: center;
   /* padding: 10px; */
-  /* margin: 10px; */
+  margin: 30px 0;
+}
+
+.top-replacement {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  /* padding: 10px; */
+  /* margin: 30px 0; */
+}
+
+.white-container {
+  background-color: white;
+  padding: 10px;
+  border: 1px solid #bfdbfe;
+  border-radius: 7px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); 
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 10px;
+  /* margin-bottom: 10px; */
+}
+
+.white-container-options {
+  background-color: white;
+  padding: 10px;
+  border: 1px solid #bfdbfe;
+  border-radius: 7px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); 
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 100px;
 }
 
 .right {
@@ -243,9 +263,9 @@ button {
   width: 100%;
   background-color: white;
   padding: 20px; 
-  margin: 10px 0;
+  /* margin: 10px 0; */
   border: 1px solid #ddd; 
-  border-radius: 8px;
+  border-radius: 7px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   /* flex: 1; */
   /* display: flex; */
@@ -254,7 +274,7 @@ button {
 
 #stacked-column-chart,
 #pie-chart {
-  flex-grow: 1;
+  /* flex-grow: 1; */
   display: flex;
   align-items: center;
   justify-content: center;
@@ -430,9 +450,22 @@ button {
 }
 
 /* Utils */
+h1 {
+  font-size: 1.5rem;
+}
+
 .icon {
   width: 2rem;
   /* height: 1rem; */
+}
+
+.arrow {
+  width: 0.7rem;
+  /* gap: 30px; */
+}
+
+.small {
+  width: 1.5rem;
 }
 
 .white {

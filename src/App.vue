@@ -2,7 +2,9 @@
 import MainContentHeader from './components/MainContentHeader.vue'
 import ReplacementChart from './components/ReplacementChart.vue'
 import ProductionChart from './components/ProductionChart.vue'
+import ReplacementReasonChart from './components/ReplacementReasonChart.vue'
 import SegmentChart from './components/SegmentChart.vue'
+// import TableTest from './components/TableTest.vue'
 </script>
 
 <template>
@@ -35,7 +37,7 @@ import SegmentChart from './components/SegmentChart.vue'
 
       <div class="first">
         <div class="graph-container replacement">
-          <div class="top">
+          <div class="top-replacement">
             <h2>Replacement</h2>
             <div class="white-container options">
               All Dealer
@@ -71,7 +73,8 @@ import SegmentChart from './components/SegmentChart.vue'
             </svg>
           </div>
         </div>
-        <ReplacementChart />
+
+        <ReplacementReasonChart />
       </div>
 
       <div class="graph-container replacement" id="region">
@@ -104,32 +107,7 @@ import SegmentChart from './components/SegmentChart.vue'
           </div>
         </div>
 
-        <table class="styled-table">
-          <thead>
-            <tr>
-              <th>Header 1</th>
-              <th>Header 2</th>
-              <th>Header 3</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td>Data 1</td>
-              <td>Data 2</td>
-              <td>Data 3</td>
-            </tr>
-            <tr>
-              <td>Data 4</td>
-              <td>Data 5</td>
-              <td>Data 6</td>
-            </tr>
-            <tr>
-              <td>Data 7</td>
-              <td>Data 8</td>
-              <td>Data 9</td>
-            </tr>
-          </tbody>
-        </table>
+        <!-- <TableTest /> -->
       </div>
 
       <div class="graph-container replacement" id="dealer">
@@ -162,32 +140,7 @@ import SegmentChart from './components/SegmentChart.vue'
           </div>
         </div>
 
-        <table class="styled-table">
-          <thead>
-            <tr>
-              <th>Header 1</th>
-              <th>Header 2</th>
-              <th>Header 3</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td>Data 1</td>
-              <td>Data 2</td>
-              <td>Data 3</td>
-            </tr>
-            <tr>
-              <td>Data 4</td>
-              <td>Data 5</td>
-              <td>Data 6</td>
-            </tr>
-            <tr>
-              <td>Data 7</td>
-              <td>Data 8</td>
-              <td>Data 9</td>
-            </tr>
-          </tbody>
-        </table>
+        <!-- <TableTest /> -->
       </div>
     </div>
   </div>

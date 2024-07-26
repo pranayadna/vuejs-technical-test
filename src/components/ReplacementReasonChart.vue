@@ -3,20 +3,16 @@ import { ref } from 'vue'
 
 const series = ref([
   {
-    name: '<2022',
-    data: [44, 55, 41, 67, 22, 43, 90]
+    name: 'Rusak',
+    data: [44, 55, 41, 67, 22, 43]
   },
   {
-    name: '2022',
-    data: [13, 23, 20, 8, 13, 27, 34]
+    name: 'Hilang',
+    data: [13, 23, 20, 8, 13, 27]
   },
   {
-    name: '2023',
-    data: [13, 23, 20, 8, 13, 27, 34]
-  },
-  {
-    name: '2024',
-    data: [11, 17, 15, 15, 21, 14, 65]
+    name: 'Lain-Lain',
+    data: [11, 17, 15, 15, 21, 14]
   }
 ])
 
@@ -56,36 +52,21 @@ const chartOptions = ref({
   },
   xaxis: {
     type: 'category',
-    categories: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul']
+    categories: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun']
   },
   legend: {
-    show: false
+    show: 'false'
   },
   fill: {
     opacity: 1
   },
-  colors: ['#ADD8E6', '#1E90FF', '#FF6347', '#32CD32'],
-  tooltip: {
-    shared: true,
-    intersect: false,
-    y: {
-      formatter: function (val) {
-        return val
-      }
-    }
-  }
+  colors: ['#1E90FF', '#32CD32', '#FF6347']
 })
 </script>
 
 <template>
   <div>
-    <apexchart
-      width="1000px"
-      height="400px"
-      type="bar"
-      :options="chartOptions"
-      :series="series"
-    ></apexchart>
+    <apexchart height="250" type="bar" :options="chartOptions" :series="series"></apexchart>
   </div>
 </template>
 
