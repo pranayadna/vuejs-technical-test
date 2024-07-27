@@ -4,7 +4,7 @@ import ReplacementChart from './components/ReplacementChart.vue'
 import ProductionChart from './components/ProductionChart.vue'
 import ReplacementReasonChart from './components/ReplacementReasonChart.vue'
 import SegmentChart from './components/SegmentChart.vue'
-// import TableTest from './components/TableTest.vue'
+import TableTest from './components/TableTest.vue'
 </script>
 
 <template>
@@ -37,60 +37,68 @@ import SegmentChart from './components/SegmentChart.vue'
 
       <div class="first">
         <div class="graph-container replacement">
-          <div class="top-replacement">
+          <div class="top border-bottom">
             <h2>Replacement</h2>
             <div class="white-container options">
               All Dealer
-              <svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+              <svg class="icon arrow" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
                 <title>triangle-down</title>
                 <path d="M1 3H23L12 22" />
               </svg>
             </div>
           </div>
 
-          <ReplacementChart />
+          <div class="chart-container">
+            <ReplacementChart />
+          </div>
         </div>
 
         <div class="graph-container" id="production">
-          <h2>Overall by Production year</h2>
-          <ProductionChart />
+          <h2 class="top border-bottom">Overall by Production year</h2>
+          <div class="chart-container">
+            <ProductionChart />
+          </div>
         </div>
       </div>
 
       <div class="graph-container" id="segment">
-        <h2>Segment</h2>
-        <SegmentChart />
+        <h2 class="top padding">Segment</h2>
+        <div class="chart-container">
+          <SegmentChart />
+        </div>
       </div>
 
       <div class="graph-container replacement" id="reasons">
-        <div class="top">
+        <div class="top padding">
           <h2>Replacement Reasons</h2>
           <div class="white-container year options">
             2024
-            <svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+            <svg class="icon arrow" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
               <title>triangle-down</title>
               <path d="M1 3H23L12 22" />
             </svg>
           </div>
         </div>
 
-        <ReplacementReasonChart />
+        <div class="chart-container">
+          <ReplacementReasonChart />
+        </div>
       </div>
 
       <div class="graph-container replacement" id="region">
-        <div class="top">
+        <div class="top padding">
           <h3>Replacement ID by Region</h3>
           <div class="right">
             <div class="white-container date options">
               All Year
-              <svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+              <svg class="icon arrow" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
                 <title>triangle-down</title>
                 <path d="M1 3H23L12 22" />
               </svg>
             </div>
             <div class="white-container options">
               Semua MD
-              <svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+              <svg class="icon arrow" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
                 <title>triangle-down</title>
                 <path d="M1 3H23L12 22" />
               </svg>
@@ -107,23 +115,23 @@ import SegmentChart from './components/SegmentChart.vue'
           </div>
         </div>
 
-        <!-- <TableTest /> -->
+        <TableTest />
       </div>
 
       <div class="graph-container replacement" id="dealer">
-        <div class="top">
+        <div class="top padding">
           <h3>Replacement ID by Dealer</h3>
           <div class="right">
             <div class="white-container date options">
               All Year
-              <svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+              <svg class="icon arrow" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
                 <title>triangle-down</title>
                 <path d="M1 3H23L12 22" />
               </svg>
             </div>
             <div class="white-container options">
               All Dealer
-              <svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+              <svg class="icon arrow" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
                 <title>triangle-down</title>
                 <path d="M1 3H23L12 22" />
               </svg>
@@ -140,7 +148,7 @@ import SegmentChart from './components/SegmentChart.vue'
           </div>
         </div>
 
-        <!-- <TableTest /> -->
+        <TableTest />
       </div>
     </div>
   </div>

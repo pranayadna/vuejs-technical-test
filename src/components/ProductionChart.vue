@@ -36,11 +36,11 @@ const chartOptions = ref({
   legend: {
     position: 'bottom',
     offsetX: 0,
-    offsetY: 14,
-    fontSize: '20px',
+    offsetY: 15,
+    fontSize: '23px',
     itemMargin: {
-      horizontal: 69,
-      vertical: 4
+      horizontal: 35,
+      vertical: 15
     },
     formatter: (seriesName, opts) => {
       const index = opts.seriesIndex
@@ -68,6 +68,6 @@ const chartOptions = ref({
 
 <template>
   <div class="chart-container">
-    <apexchart height="400" type="donut" :options="chartOptions" :series="series" />
+    <apexchart height="450" type="donut" :options="chartOptions" :series="series" />
   </div>
 </template>

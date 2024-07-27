@@ -45,7 +45,7 @@ const chartOptions = ref({
   plotOptions: {
     bar: {
       horizontal: false,
-      columnWidth: '30%',
+      columnWidth: '60%',
       // columnGap: '10%',
       barHeight: '100%',
       borderRadius: 5,

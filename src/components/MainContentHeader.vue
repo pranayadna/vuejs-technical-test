@@ -1,5 +1,5 @@
 <template>
-  <div class="top">
+  <div class="top title">
     <h1 class="title-new">Replacement</h1>
     <div class="right">
       <div class="white-container date">
