@@ -62,27 +62,3 @@
     </tbody>
   </table>
 </template>
-
-<style scoped>
-.padding-left {
-  padding-left: 50px;
-}
-table {
-  width: 100%;
-  border-collapse: collapse;
-  margin-bottom: 23px;
-}
-th,
-td {
-  padding: 23px 12px;
-  text-align: left;
-}
-th {
-  background-color: white;
-  border-top: 1px solid #bfdbfe;
-  border-bottom: 1px solid #bfdbfe;
-}
-tr:nth-child(even) {
-  background-color: #f2f2f2;
-}
-</style>

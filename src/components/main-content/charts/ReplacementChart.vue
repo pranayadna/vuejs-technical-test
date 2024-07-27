@@ -3,16 +3,20 @@ import { ref } from 'vue'
 
 const series = ref([
   {
-    name: 'Rusak',
-    data: [44, 55, 41, 67, 22, 43]
+    name: '<2022',
+    data: [44, 55, 41, 67, 22, 43, 90]
   },
   {
-    name: 'Hilang',
-    data: [13, 23, 20, 8, 13, 27]
+    name: '2022',
+    data: [13, 23, 20, 8, 13, 27, 34]
   },
   {
-    name: 'Lain-Lain',
-    data: [11, 17, 15, 15, 21, 14]
+    name: '2023',
+    data: [13, 23, 20, 8, 13, 27, 34]
+  },
+  {
+    name: '2024',
+    data: [11, 17, 15, 15, 21, 14, 65]
   }
 ])
 
@@ -41,42 +45,45 @@ const chartOptions = ref({
   plotOptions: {
     bar: {
       horizontal: false,
-      columnWidth: '30%',
+      columnWidth: '60%',
       // columnGap: '10%',
       barHeight: '100%',
       borderRadius: 5,
       borderRadiusApplication: 'around',
       borderRadiusWhenStacked: 'all'
-      // distributed: true
     }
   },
   xaxis: {
     type: 'category',
-    categories: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun']
+    categories: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul']
   },
   legend: {
-    show: 'false'
+    show: false
   },
   fill: {
     opacity: 1
   },
-  colors: ['#1E90FF', '#32CD32', '#FF6347']
+  colors: ['#ADD8E6', '#1E90FF', '#FF6347', '#32CD32'],
+  tooltip: {
+    shared: true,
+    intersect: false,
+    y: {
+      formatter: function (val) {
+        return val
+      }
+    }
+  }
 })
 </script>
 
 <template>
   <div>
-    <apexchart height="250" type="bar" :options="chartOptions" :series="series"></apexchart>
+    <apexchart
+      width="1000px"
+      height="400px"
+      type="bar"
+      :options="chartOptions"
+      :series="series"
+    ></apexchart>
   </div>
 </template>
-
-<style>
-/* Disable hover effect for Product B
-.apexcharts-series.gap path {
-  transition: none !important;
-} */
-
-/* .apexcharts-series.gap path:hover {
-  filter: none !important;
-} */
-</style>

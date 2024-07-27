@@ -1,18 +1,8 @@
 <script setup>
 import { ref, computed } from 'vue'
 
-// Define series with names and data
 const series = ref([38, 15, 22, 25])
 const labels = ['2024', '2023', '2022', 'Others']
-
-// const combinedData = computed(() => {
-//   return series.value.map((value, index) => {
-//     return { label: labels[index], value: value }
-//   })
-// })
-
-// Flatten series data for the chart
-// const series = computed(() => seriesData.value.map((s) => s.data[0]))
 const highestValue = computed(() => Math.max(...series.value))
 
 const chartOptions = ref({
@@ -45,7 +35,7 @@ const chartOptions = ref({
     formatter: (seriesName, opts) => {
       const index = opts.seriesIndex
       const value = series.value[index]
-      return `${seriesName}: ${value}%` // Combine label and value
+      return `${seriesName}: ${value}%`
     }
   },
   plotOptions: {
