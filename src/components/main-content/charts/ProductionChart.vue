@@ -29,7 +29,7 @@ const chartOptions = ref({
     offsetY: 15,
     fontSize: '23px',
     itemMargin: {
-      horizontal: 35,
+      horizontal: 50,
       vertical: 15
     },
     formatter: (seriesName, opts) => {
@@ -57,7 +57,5 @@ const chartOptions = ref({
 </script>
 
 <template>
-  <div class="chart-container">
     <apexchart height="450" type="donut" :options="chartOptions" :series="series" />
-  </div>
 </template>
